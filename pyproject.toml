@@ -1,0 +1,20 @@
+[project]
+name = "python200-homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mnunez1001", email = "mnunezpalomares@guilford.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.13.5",
+    "pytest>=9.1.1",
+]
+
+[project.scripts]
+python200-homework = "python200_homework:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
