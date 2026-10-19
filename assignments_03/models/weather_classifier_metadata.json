@@ -1,0 +1,62 @@
+{
+  "python_version": "3.12.15",
+  "scikit_learn_version": "1.9.1",
+  "feature_names": [
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "precipitation_sum",
+    "wind_speed_10m_max"
+  ],
+  "class_labels": {
+    "0": "skip",
+    "1": "good"
+  },
+  "label_rule": {
+    "temperature_2m_max_min_inclusive": 7,
+    "temperature_2m_max_max_inclusive": 26,
+    "temperature_2m_min_min_inclusive": 0,
+    "precipitation_sum_max_exclusive": 3,
+    "wind_speed_10m_max_max_exclusive": 30
+  },
+  "city": "Las Vegas, Nevada",
+  "latitude": 36.17,
+  "longitude": -115.14,
+  "timezone": "America/Los_Angeles",
+  "start_date": "2023-01-01",
+  "end_date": "2023-12-31",
+  "units": {
+    "temperature": "celsius",
+    "precipitation": "mm",
+    "wind_speed": "km/h"
+  },
+  "model_type": "logistic_regression",
+  "selection_reason": "Compact linear model with inexpensive predictions, interpretable coefficients, and smooth probability estimates; accepts lower test performance than KNN.",
+  "random_state": 42,
+  "dataset_rows": 365,
+  "training_rows": 292,
+  "test_rows": 73,
+  "good_day_fraction": 0.336986301369863,
+  "test_accuracy": 0.9178082191780822,
+  "test_f1": 0.88,
+  "test_precision": 0.88,
+  "test_recall": 0.88,
+  "comparison": {
+    "knn": {
+      "best_k": 1,
+      "test_metrics": {
+        "accuracy": 0.9726027397260274,
+        "precision": 0.9259259259259259,
+        "recall": 1.0,
+        "f1": 0.9615384615384616
+      }
+    },
+    "logistic_regression": {
+      "test_metrics": {
+        "accuracy": 0.9178082191780822,
+        "precision": 0.88,
+        "recall": 0.88,
+        "f1": 0.88
+      }
+    }
+  }
+}
